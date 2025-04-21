@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
   chrome.storage.sync.get(["geminiApiKey"], ({ geminiApiKey }) => {
-    // This is the fixed condition - only set the value if geminiApiKey EXISTS
     if (geminiApiKey) {
       document.getElementById("api-key").value = geminiApiKey;
     }
