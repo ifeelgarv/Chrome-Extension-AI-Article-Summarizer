@@ -10,7 +10,6 @@ AI Article Summarizer is a simple and clean Chrome Extension that uses AI to sum
 - 🤖 AI-powered and efficient
 - ⚡ Fast and easy to use
 - 💡 Minimal and responsive UI
-- 🔒 No data stored or shared
 
 ---
 
@@ -38,8 +37,9 @@ AI Article Summarizer is a simple and clean Chrome Extension that uses AI to sum
 
 1. Visit any article or blog post you want to summarize.
 2. Click the 🧠 **AI Summarizer** icon from your extensions toolbar.
-3. Click the **Summarize** button.
-4. Get a clean and concise summary in seconds!
+3. Add your GEMINI API KEY
+4. Click the **Summarize** button.
+5. Get a clean and concise summary in seconds!
 
 ---
 
@@ -60,15 +60,6 @@ ai-summarizer/
 
 ---
 
-## 🧠 Future Improvements
-
-- Summarize selected text only
-- Add support for dark/light themes
-- Offline summarization support
-- Multi-language summarization
-
----
-
 ## 🙌 Contributing
 
 Got suggestions or want to improve the extension? Pull requests are welcome!  
@@ -78,4 +69,4 @@ Feel free to fork the repo and submit your ideas.
 
 ## ✨ Credits
 
-Built with ❤️ using HTML, CSS, JavaScript — by Gaurav Singh
+Built with ❤️ using HTML, CSS, JavaScript — by ifeelgarv
