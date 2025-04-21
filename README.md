@@ -45,8 +45,9 @@ AI Article Summarizer is a simple and clean Chrome Extension that uses AI to sum
 
 ## 📁 Folder Structure
 
+```
 ai-article-summarizer/ │ ├── manifest.json # Chrome extension config ├── popup.html # UI layout ├── popup.css # Styling ├── popup.js # Main logic ├── icon.png # Extension icon └── README.md
-
+```
 
 ---
 
@@ -63,12 +64,6 @@ ai-article-summarizer/ │ ├── manifest.json # Chrome extension config ├
 
 Got suggestions or want to improve the extension? Pull requests are welcome!  
 Feel free to fork the repo and submit your ideas.
-
----
-
-## 📄 License
-
-This project is licensed under the [MIT License](LICENSE).
 
 ---
 
