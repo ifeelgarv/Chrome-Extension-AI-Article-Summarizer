@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Extension Options</title>
+  <style>
+    :root {
+      --primary-color: #6366f1;
+      --primary-hover: #4f46e5;
+      --bg-color: #f9fafb;
+      --card-bg: #ffffff;
+      --text-color: #1f2937;
+      --text-secondary: #6b7280;
+      --success-color: #10b981;
+      --border-color: #e5e7eb;
+      --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.5;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      background-color: var(--card-bg);
+      width: 480px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      padding: 2rem;
+      max-width: 90%;
+    }
+
+    h1 {
+      color: var(--text-color);
+      font-size: 1.75rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      position: relative;
+      padding-bottom: 0.75rem;
+    }
+
+    h1::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 3px;
+      background-color: var(--primary-color);
+      border-radius: 3px;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+      color: var(--text-color);
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      outline: none;
+      background-color: #f9fafb;
+    }
+
+    input[type="text"]:focus {
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+      background-color: #fff;
+    }
+
+    input[type="text"]::placeholder {
+      color: #9ca3af;
+    }
+
+    p {
+      color: var(--text-secondary);
+      font-size: 0.875rem;
+      margin-top: 0.5rem;
+    }
+
+    a {
+      color: var(--primary-color);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    a:hover {
+      color: var(--primary-hover);
+      text-decoration: underline;
+    }
+
+    button {
+      background-color: var(--primary-color);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      width: 100%;
+      display: block;
+      margin-top: 1rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    button:hover {
+      background-color: var(--primary-hover);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(99, 102, 241, 0.25);
+    }
+    
+    button:active {
+      transform: translateY(0);
+    }
+
+    button::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 300%;
+      height: 300%;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      transition: transform 0.6s ease-out;
+    }
+
+    button:active::before {
+      transform: translate(-50%, -50%) scale(1);
+      transition: transform 0s;
+    }
+
+    .success-message {
+      color: var(--success-color);
+      text-align: center;
+      font-weight: 500;
+      margin-top: 1rem;
+      padding: 0.5rem;
+      border-radius: 6px;
+      background-color: rgba(16, 185, 129, 0.1);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      height: 0;
+      overflow: hidden;
+    }
+
+    .success-message.visible {
+      opacity: 1;
+      height: auto;
+      padding: 0.5rem;
+    }
+
+    .logo {
+      margin: 0 auto 1.5rem;
+      width: 64px;
+      height: 64px;
+      background-color: var(--primary-color);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo svg {
+      width: 36px;
+      height: 36px;
+      fill: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M5.12 14.37a.75.75 0 01.545-1.399l14.07 5.5a.75.75 0 01-.545 1.399l-14.07-5.5zm14.07-5.5a.75.75 0 00-.545-1.399l-14.07 5.5a.75.75 0 10.545 1.399l14.07-5.5z" />
+      </svg>
+    </div>
+    <h1>AI Summary Settings</h1>
+    
+    <div class="form-group">
+      <label for="api-key">Gemini API Key</label>
+      <input type="text" id="api-key" placeholder="Enter your Gemini API Key" />
+      
+      <p>
+        You can get an API key from
+        <a href="https://makersuite.google.com/app/apikey" target="_blank">Google AI Studio</a>
+      </p>
+    </div>
+    
+    <button id="save-button">Save Settings</button>
+    <p id="success-message" class="success-message">Settings Saved Successfully</p>
+  </div>
+  
+  <script src="options.js"></script>
+</body>
+</html>
